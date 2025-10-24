@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🌿 Hasil Prediksi Decision Tree</h2>
+
+        {% if result %}
+            <p><strong>Prediksi Tingkat Kebahagiaan:</strong> {{ result }}</p>
+        {% endif %}
+
+        {% if chart_url %}
+            <h3>📊 Probabilitas Prediksi</h3>
+            <img src="data:image/png;base64,{{ chart_url }}" class="chart">
+        {% endif %}
+
+        {% if cm_url %}
+            <h3>🧮 Confusion Matrix</h3>
+            <img src="data:image/png;base64,{{ cm_url }}" class="chart">
+        {% endif %}
+
+        {% if roc_url %}
+            <h3>📈 Kurva ROC/AUC</h3>
+            <img src="data:image/png;base64,{{ roc_url }}" class="chart">
+        {% endif %}
+
+        <a href="/" class="back-btn">🔙 Kembali</a>
+    </div>
+</body>
+</html>

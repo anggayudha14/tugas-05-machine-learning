@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decision Tree Happiness Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🌿 Prediksi Tingkat Kebahagiaan</h2>
+        <form action="/predict" method="POST">
+
+            <label>Usia (Age)</label>
+            <input type="number" name="Age" required>
+
+            <label>Jenis Kelamin (0 = Pria, 1 = Wanita)</label>
+            <input type="number" name="Gender" min="0" max="1" required>
+
+            <label>Durasi Layar Harian (jam)</label>
+            <input type="number" name="Daily_Screen_Time(hrs)" required>
+
+            <label>Kualitas Tidur (1-10)</label>
+            <input type="number" name="Sleep_Quality(1-10)" required>
+
+            <label>Tingkat Stres (1-10)</label>
+            <input type="number" name="Stress_Level(1-10)" required>
+
+            <label>Hari Tanpa Media Sosial</label>
+            <input type="number" name="Days_Without_Social_Media" required>
+
+            <label>Frekuensi Olahraga per Minggu</label>
+            <input type="number" name="Exercise_Frequency(week)" required>
+
+            <label>Platform Media Sosial (0=IG,1=Tiktok,2=Twitter,dll)</label>
+            <input type="number" name="Social_Media_Platform" required>
+
+            <button type="submit">Prediksi Sekarang</button>
+        </form>
+    </div>
+</body>
+</html>

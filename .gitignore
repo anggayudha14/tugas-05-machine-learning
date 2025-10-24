@@ -1,0 +1,22 @@
+# Ignore virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Ignore dataset besar
+*.csv
+*.xlsx
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
